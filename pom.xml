@@ -8,5 +8,47 @@
     <artifactId>learning</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>2.1.2.RELEASE</version>
+    </parent>
 
+  <dependencies>
+      <!--spring boot dependencies-->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter</artifactId>
+          <version>2.1.2.RELEASE</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-stream</artifactId>
+          <version>2.0.1.RELEASE</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-stream-binder-kafka-streams</artifactId>
+          <version>2.0.1.RELEASE</version>
+      </dependency>
+
+      <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <exclusions>
+          <exclusion>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+      </exclusions>
+      </dependency>
+
+      <!--spring cloud dependencies-->
+      <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-stream-binder-kafka</artifactId>
+          <version>1.0.0.RELEASE</version>
+      </dependency>
+  </dependencies>
 </project>
